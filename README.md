@@ -15,5 +15,6 @@ Sketch of a course that combines a course in computer architecture with a course
   - [Integers and the ALU](https://github.com/csc-courses/csc-c-joint/blob/main/data-representation/integer-representation.ipynb)
   - [Characters and Strings](https://github.com/csc-courses/csc-c-joint/blob/main/data-representation/character-representation.ipynb)
   - Floating point
+- Interrupts
 
 ### Part Two: Operating systems
