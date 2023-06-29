@@ -11,5 +11,5 @@ Sketch of a course that combines a course in computer architecture with a course
   - Stack and heap
 - Data Representation
   - [Integers and the ALU](https://github.com/csc-courses/csc-c-joint/blob/main/integer-representation/integer-representation.ipynb)
-  - [Characters and Strings](https://github.com/csc-courses/csc-c-joint/tree/main/character-representation)\
+  - [Characters and Strings](https://github.com/csc-courses/csc-c-joint/tree/main/character-representation)
   - Floating point
