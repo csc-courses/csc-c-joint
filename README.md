@@ -8,11 +8,11 @@ Sketch of a course that combines a course in computer architecture with a course
   - [Getting started in C](https://github.com/csc-courses/csc-c-joint/blob/main/hello-world/hello-world.ipynb)
   - [Basic Computer Architecture](https://github.com/csc-courses/csc-c-joint/blob/main/architecture/basic-architecture.ipynb)
 - Memory
+  - [Bytes and registers](https://github.com/csc-courses/csc-c-joint/blob/main/memory/bytes-and-registers.ipynb)
   - [References, Pointers and Memory](https://github.com/csc-courses/csc-c-joint/blob/main/memory/references-and-pointers.ipynb)
   - [Stack and heap](https://github.com/csc-courses/csc-c-joint/blob/main/memory/stack-and-heap.ipynb)
-- Data Representation
-  - [Bit representaion](https://github.com/csc-courses/csc-c-joint/blob/main/data-representation/bit-bytes.ipynb)
-  - [Integers and the ALU](https://github.com/csc-courses/csc-c-joint/blob/main/data-representation/integer-representation.ipynb)
+- Data Representations
+  - [Integers and Signs](https://github.com/csc-courses/csc-c-joint/blob/main/data-representation/integer-representation.ipynb)
   - [Characters and Strings](https://github.com/csc-courses/csc-c-joint/blob/main/data-representation/character-representation.ipynb)
   - Floating point
 - Interrupts and Processes
