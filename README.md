@@ -8,7 +8,7 @@ Sketch of a course that combines a course in computer architecture with a course
   - [Getting started in C](https://github.com/csc-courses/csc-c-joint/blob/main/hello-world/hello-world.ipynb)
   - [Basic Computer Architecture](https://github.com/csc-courses/csc-c-joint/blob/main/architecture/basic-architecture.ipynb)
 - Memory
-  - [Memory and the CPU](https://github.com/csc-courses/csc-c-joint/blob/main/memory/bit-bytes-integers.ipynb)
+  - [Memory and the CPU](https://github.com/csc-courses/csc-c-joint/blob/main/memory/bit-bytes.ipynb)
   - [References, Pointers and Memory](https://github.com/csc-courses/csc-c-joint/blob/main/memory/references-and-pointers.ipynb)
   - [Stack and heap](https://github.com/csc-courses/csc-c-joint/blob/main/memory/stack-and-heap.ipynb)
 - Data Representation
