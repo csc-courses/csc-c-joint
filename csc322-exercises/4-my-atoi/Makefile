@@ -1,5 +1,5 @@
 #
-# makefile for count-vowels
+# makefile for my-atoi
 # author:
 # last-update: 
 #    26 jul 2023 - template
