@@ -1,7 +1,8 @@
 #
-# makefile for csc322
-# last-update:
-#	26 jul 2023
+# makefile for hello-world
+# author:
+# last-update: 
+#    26 jul 2023 - template
 #
 
 RED= \033[0;31m
