@@ -17,10 +17,10 @@ all:
 	make test
 	make clean
 
-linked-list: linked-list.c ll-utils.o linked-list.h
+linked-list: linked-list.c ll-utils.o ll-utils.h
 	cc -o $@ ll-utils.o $<
 
-ll-utils.o: ll-utils.c linked-list.h
+ll-utils.o: ll-utils.c ll-utils.h
 	cc -c $<
 
 test: $F
