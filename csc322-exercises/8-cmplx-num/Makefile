@@ -24,18 +24,18 @@ $G.o: $G.c $G.h
 	cc -c $<
 
 test: $F
-	echo "1.0 0.0\n 1.0 0.0" | ./$F > $F.out
-	echo "" >> $F.out
-	echo "0.0 1.0\n 0.0 1.0" | ./$F >> $F.out
-	echo "" >> $F.out
-	echo "1.0 1.0\n 1.0 -1.0" | ./$F >> $F.out
-	echo "" >> $F.out
-	echo "0.0 4.0\n -3.0 0.0" | ./$F >> $F.out
-	echo "" >> $F.out
-	cat $F.out
-	diff $F.out $F.ref
+	echo "1.0 0.0\n 1.0 0.0" | ./$F > test.out
+	echo "" >> test.out
+	echo "0.0 1.0\n 0.0 1.0" | ./$F >> test.out
+	echo "" >> test.out
+	echo "1.0 1.0\n 1.0 -1.0" | ./$F >> test.out
+	echo "" >> test.out
+	echo "0.0 4.0\n -3.0 0.0" | ./$F >> test.out
+	echo "" >> test.out
+	cat test.out
+	diff test.out test.ref
 	@echo "*** ${GREEN}PASSED ${NC}***"
 	
 clean:
-	-rm $F $G.o $F.out
+	-rm $F $G.o test.out
 
