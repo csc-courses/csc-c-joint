@@ -24,14 +24,14 @@ int main(int argc, char * argv[]) {
 	char buf[BUF_SIZE] ;
 
 	while ((ch = getopt(argc, argv, "a")) != -1) 
-	switch(ch) {
-		case 'a':
-			is_append = 1 ;
-			break ;
-		default:
-			printf("%s\n", USAGE_MESSAGE) ;
-			return 0 ;
-	}
+		switch(ch) {
+			case 'a':
+				is_append = 1 ;
+				break ;
+			default:
+				printf("%s\n", USAGE_MESSAGE) ;
+				return 0 ;
+		}
 	argc -= optind;
 	argv += optind;
 
