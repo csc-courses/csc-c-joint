@@ -24,11 +24,11 @@ ll-utils.o: ll-utils.c ll-utils.h
 	cc -c $<
 
 test: $F
-	./$F one fish two fish > $F.out
-	cat $F.out
-	diff $F.out $F.ref
+	./$F one fish two fish > test.out
+	cat test.out
+	diff test.out test.ref
 	@echo "*** ${GREEN}PASSED ${NC}***"
 	
 clean:
-	-rm $F $G.o $F.out
+	-rm $F $G.o test.out
 
