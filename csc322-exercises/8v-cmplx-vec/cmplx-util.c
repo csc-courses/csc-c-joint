@@ -16,11 +16,22 @@
  *
  */
 
+#define CMPLX_FORMAT "%.2f%+.2fi "
 
-#define CMPLX_FORMAT "%.2f%+.2fi\n"
 
 void cmplx_printf(struct Complex * c ) {
 	printf(CMPLX_FORMAT, c->real, c->imag) ;
+	printf("\n") ;
+	return ;
+}
+
+void cmplx_printf_v(struct Complex * c, int dim ) {
+	int i ;
+	printf("[ ") ;
+	for (i=0;i<dim;i++) {	
+		printf(CMPLX_FORMAT, c[i].real,c[i].imag) ;
+	}
+	printf("]\n") ;
 	return ;
 }
 
@@ -44,4 +55,19 @@ struct Complex * cmplx_mult( struct Complex * prod, struct Complex * mul ) {
 	prod->real = (temp.real * mul->real) - (temp.imag * mul->imag) ;
 	prod->imag = (temp.real * mul->imag) + (temp.imag * mul->real) ;
 	return prod ;
+}
+
+struct Complex cmplx_inner( struct Complex * v1, struct Complex * v2, int dim ) {
+	int i ;
+	struct Complex d, t ;
+	d.real = d.imag = 0.0 ;
+	
+	for (i=0; i<dim; i++) {
+		cmplx_copy(&t, v2+i) ;
+		t.imag = -t.imag ;
+		cmplx_mult(&t, v1+i) ;
+		cmplx_add( &d, &t) ;
+	}
+	return d ;
+	
 }

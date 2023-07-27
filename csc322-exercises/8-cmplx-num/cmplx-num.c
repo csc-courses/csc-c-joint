@@ -44,7 +44,7 @@ int main(int argc, char * argv[]) {
 	
 	res = read_complex_number(&c1, buf) ;
 	if (res) {
-		printf("error\n") ;
+		printf("error: read_complex_number returns %d\n", res ) ;
 		return 0 ;
 	}
 	
@@ -59,20 +59,20 @@ int main(int argc, char * argv[]) {
 	}
 
 	printf("c1:\t") ;
-	cmplx_printf(CMPLX_FORMAT, &c1) ;
+	cmplx_printf(&c1) ;
 	
 	printf("c1:\t") ;
-	cmplx_printf(CMPLX_FORMAT, &c2) ;
+	cmplx_printf(&c2) ;
 
 	cmplx_copy(&c3, &c1 ) ;
 	cmplx_add(&c1, &c2 ) ;
 	printf("c1+c2:\t") ;
-	cmplx_printf(CMPLX_FORMAT, &c1) ;
+	cmplx_printf(&c1) ;
 	
 	cmplx_copy(&c1, &c3) ;
 	cmplx_mult(&c1, &c2 ) ;
 	printf("c1*c2:\t") ;;
-	cmplx_printf(CMPLX_FORMAT, &c1) ;
+	cmplx_printf(&c1) ;
 
  	return 0 ;
  }
