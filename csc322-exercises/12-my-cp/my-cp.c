@@ -23,7 +23,7 @@ int main(int argc, char * argv[]) {
 	FILE * f_in, * f_out ;
 	char buf[BUF_SIZE] ;
 
-	while ((ch = getopt(argc, argv, "a")) != -1) {
+	while ((ch = getopt(argc, argv, "a")) != -1) 
 	switch(ch) {
 		case 'a':
 			is_append = 1 ;
@@ -31,7 +31,6 @@ int main(int argc, char * argv[]) {
 		default:
 			printf("%s\n", USAGE_MESSAGE) ;
 			return 0 ;
-	}
 	}
 	argc -= optind;
 	argv += optind;
