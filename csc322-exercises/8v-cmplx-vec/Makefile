@@ -26,15 +26,15 @@ cmplx-util.o: cmplx-util.c cmplx-util.h
 V1= "1.0 0.0 1.0 0.0 1.0 0.0"
 V2= "1.0 1.0 -1.0 0.0 0.0 -1.0"
 test: $F
-	echo ${V1} "\n" ${V1} | ./$F > $F.out
-	echo "" >> $F.out
-	echo ${V1} "\n" ${V2} | ./$F >> $F.out
-	echo "" >> $F.out
-	echo ${V2} "\n" ${V2} | ./$F >> $F.out
-	cat $F.out
-	diff $F.out $F.ref
+	echo ${V1} "\n" ${V1} | ./$F > test.out
+	echo "" >> test.out
+	echo ${V1} "\n" ${V2} | ./$F >> test.out
+	echo "" >> test.out
+	echo ${V2} "\n" ${V2} | ./$F >> test.out
+	cat test.out
+	diff test.out test.ref
 	@echo "*** ${GREEN}PASSED ${NC}***"
 	
 clean:
-	-rm $F $G.o $F.out
+	-rm $F $G.o test.out
 
