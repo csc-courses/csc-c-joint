@@ -15,5 +15,6 @@ struct Node {
 struct Node * make_empty_tree() ;
 void print_tree(struct Node * root) ;
 void print_inorder(struct Node * root ) ;
-void insert_tree(struct Node * root, char * value ) ;
+void insert_item(struct Node * root, char * item ) ;
+struct Node * find_item(struct Node * root, char * item ) ;
 

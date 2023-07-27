@@ -26,8 +26,8 @@ $G.o: $G.c $G.h
 R= "report food mother far board direction plate happy tide saw free thirty"
 
 test: $F
-	echo $R | ./$F -s 
-	echo $R | ./$F > test.out
+	echo $R  ">" | ./$F
+	echo $R "^" | ./$F > test.out
 	diff test.out test.ref
 	@echo "*** ${GREEN}PASSED ${NC}***"
 	

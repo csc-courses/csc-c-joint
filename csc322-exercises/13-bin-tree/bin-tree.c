@@ -44,13 +44,26 @@ int main(int argc, char * argv[]) {
  	while (fgets(buf, sizeof(buf), stdin)) {
  		s = strtok(buf, DELIMIT) ;
  		while (s) {
- 			insert_tree(root, s) ;
+ 			switch (s[0]) {
+ 			case '^':
+ 				print_tree(root) ;
+ 				break ;
+ 			case '>':
+ 				print_inorder(root) ;
+ 				break ;
+ 			case '=':
+ 				if (!find_item(root,s))
+ 					printf("%s: not found.\n", s) ;
+ 				break ;
+ 			case '+':
+ 			default:
+ 				insert_item(root, s) ;
+ 				break ;
+ 			}
+ 			
  			s = strtok(NULL, DELIMIT) ;
  		}
  	}
- 	
- 	if (is_sort) print_inorder(root) ;
- 	else print_tree(root) ;
- 	
+ 
  	return 0 ;
  }

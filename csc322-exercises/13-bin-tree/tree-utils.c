@@ -59,13 +59,13 @@ void print_inorder(struct Node * root ) {
 	return ;
 }
 
-void insert_tree(struct Node * root, char * value ) {
+void insert_item(struct Node * root, char * item ) {
 	struct Node * prev = root ;
 	struct Node * next = prev->right ;
 	struct Node * new ;
 	
 	new = (struct Node *) malloc(sizeof(struct Node)) ;
-	new->value = strdup(value) ;
+	new->value = strdup(item) ;
 	new->left = new->right = NULL ;
 	
 	while (next) {
@@ -80,3 +80,24 @@ void insert_tree(struct Node * root, char * value ) {
 	return ;
 }
 
+struct Node * find_item(struct Node * root, char * item ) {
+	struct Node * prev = root ;
+	struct Node * next = prev->right ;
+	int r ; 
+	
+	r = strcmp(item, next->value) ;
+	while (r) {
+		if (r<0) {
+			prev = next ;
+			next = next->left ;
+		}
+		else {  // r>0
+			prev = next ;
+			next = next->right ;
+		}
+		if (!next) 
+			return NULL ;
+		r = strcmp(item, next->value) ;
+	}
+	return prev ;
+}
