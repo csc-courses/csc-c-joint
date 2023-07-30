@@ -2,6 +2,14 @@
 #include<stdlib.h>
 #include<assert.h>
 
+/*
+ * long john von neumann hooks the stack 
+ * author: bjr
+ * last-update:
+ *    29 jul 2023
+ *
+ */
+ 
 
 long int return_to ; 
 long int there_be_pirates = 0 ;
