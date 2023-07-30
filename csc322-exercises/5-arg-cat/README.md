@@ -1,9 +1,9 @@
 Learning points.
 
-1- malloc
-1- casting operator
-1- dereferencing operator and declarator syntax
-1- strcat
+- `malloc`
+- casting operator
+- dereferencing operator and declarator syntax
+- the `strcat` from the `string` library
 
 
 
