@@ -1,12 +1,12 @@
 Learning
 
-1- floating point
-1- individual compilation files
-1- common included header file
-1- foward function declarations (in the header file)
-1- compiler options for .o file
-1- final link to an executable
-1- make file dependencies for complication units
-1- struct declaration, syntax and use
-1- dereferencing and dot operation -> 
+- floating point
+- individual compilation files
+- common included header file
+- foward function declarations (in the header file)
+- compiler options for `.o` file
+- final link to an executable
+-  make file dependencies for complication units
+- struct declaration, syntax and use
+- dereferencing and dot operation `->`
 
