@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 /*
- * arg-reverse.c
+ * arg-cat.c
  * author:
  * date:
  *
