@@ -9,7 +9,7 @@ long int there_be_pirates = 0 ;
 #define PIRATE_SECRET 2 
 
 void caribbean_voyage() {
-	long int i ;
+	long int i ;  // a place on the stack, for the pirate's hook!
 	printf("\nAre there pirates?\n" ) ;
 	
 	if (there_be_pirates) {
