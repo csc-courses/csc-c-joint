@@ -1,6 +1,6 @@
 Learning
 
-1- the ctype function isdigit
-1- the string function string
-1- the conversion of numerical characters to numerical values
+- the ctype function isdigit
+- the string function string
+- the conversion of numerical characters to numerical values
 
