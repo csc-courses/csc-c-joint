@@ -14,7 +14,10 @@
 long int return_to ; 
 long int there_be_pirates = 0 ;
 
+// 2 is the secret on OSX Ventura, Apple M1
+// 3 is the secret on a windows 11 Lenovo Intel
 #define PIRATE_SECRET 2 
+
 
 void caribbean_voyage() {
 	long int i ;  // a place on the stack, for the pirate's hook!

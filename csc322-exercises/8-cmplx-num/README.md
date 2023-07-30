@@ -1,6 +1,7 @@
 Learning
 
-1- individual compliation files
+1- floating point
+1- individual compilation files
 1- common included header file
 1- foward function declarations (in the header file)
 1- compiler options for .o file
