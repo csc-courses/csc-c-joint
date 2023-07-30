@@ -1,8 +1,8 @@
 Learning points,
 
-1- arrays of structs
-1- derefernece notation
-1- passing structs by pointers
-1- the math library
+- arrays of structs
+- dereference notation
+- passing structs by pointers
+- the `math` library
 
 
