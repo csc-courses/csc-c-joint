@@ -22,7 +22,11 @@ test: my-itoa
 	./my-itoa 0
 	./my-itoa 1
 	./my-itoa 21
-	./my-itoa 31123123
+	./my-itoa 12345
+	./my-itoa -0
+	./my-itoa -1
+	./my-itoa -21
+	./my-itoa -12345
 	
 clean:
 	-rm my-itoa
