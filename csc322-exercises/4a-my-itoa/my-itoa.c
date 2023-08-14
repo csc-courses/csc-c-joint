@@ -49,14 +49,13 @@ void intToBase10String (int d, char s [], int len ) {
 	}
 	while (d) {
  		s[i++] = (d%10)+'0' ;
- 		d = d/10 ;
+ 		d /= 10 ;
  		assert(i<len) ;
  	}
- 	if (i==0) {
- 		s[i] = '0' ;
- 		i = 1 ;
- 	}
+ 	
+ 	if (i==0) s[i++] = '0' ;
  	if (sign<0) s[i++] = '-' ;
+ 
  	for (j=0;j<i/2;j++) {
  		t = s[j] ;
  		s[j] = s[i-j-1] ;
