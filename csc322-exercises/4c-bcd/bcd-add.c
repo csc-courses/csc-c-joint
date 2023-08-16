@@ -38,14 +38,16 @@ int bcd_toa( int d, char a[], int len ) {
 	int bit, i ;
 	int l = 2*sizeof(int) ;
 	
+	if (!d) {
+		a[0] = '0' ;
+		return 1 ;	
+	}
+	
 	for (bit = (8*sizeof(int))-4; bit>=0; bit-=4) {
 		if ((d>>bit)) break ;
 		l-- ;
 	}
-	if (l<0) {
-		a[0] = '0' ;
-		return 1 ;
-	}
+
 	for (i=0;i<l;i++) {
 		a[l-i-1] = (0x0f&d)+'0' ;
 		d = d>>4 ;
@@ -84,7 +86,6 @@ int bcd_9complement(int d) {
 		d1 += t<<(4*i) ;
 		d >>= 4 ;
 	}
-	printf("(%d): d=%d\n", __LINE__, d1 ) ;
 	return d1 ;
 }
 
