@@ -13,24 +13,28 @@ NC= \033[0m
 F= bcd-add
 G= bcd-sub
 
+D= -D IS_SUB
+
 all:
 	make test
 	make clean
 
 $F: $F.c
-	cc -o $@ $<
+	cc $D -o $@ $<
 
 test: $F
 	./$F 1 2
 	./$F 9 8
-	./$F 10 13
-	./$F 14  17
-	./$F 20  30
+	./$F 13 10
+	./$F 17  14
+	./$F 30  20
 	./$F 100 12
 	./$F 123 87
 	./$F 301 1
 	./$F 001 1
-	
+	./$F 4 4 
+
+
 	
 clean:
 	-rm $F $F.out
