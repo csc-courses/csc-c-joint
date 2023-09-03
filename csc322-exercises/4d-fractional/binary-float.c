@@ -70,9 +70,19 @@ int frac_dec_to_bin(int d_n, int d_p, int b_p) {
 }
 
 int frac_bin_to_dec(int b_n, int b_p, int d_p) {
-	int d_n ;
-	d_n /= pow(10,b_p-d_p) ;
-	d_n = b_n * pow(5,b_p) ;
+	int d_n = 0 ;
+	int i, digit ;
+	int denom = pow(2,b_p) ;
+	
+	for (i=0;i<d_p;i++) {
+		digit = 0 ;
+		b_n *= 10 ;
+		if (b_n>=denom) {
+			digit = b_n / denom ;
+			b_n -= digit*denom ;
+		}
+		d_n = 10*d_n + digit ;
+	}
 	return d_n ;
 }
 
@@ -94,6 +104,10 @@ int main(int argc, char * argv[]) {
 	print_bin_mantissa(bin_numerator, bin_precision) ;
 	printf("\n", bin_precision) ;
 	
+	dec_numerator = frac_bin_to_dec(bin_numerator, bin_precision, 7 ) ;
+	f = dec_numerator/pow(10,7) ;
+	printf("decimal fraction: %d/10e%d = %f\n",  dec_numerator, 7, f) ;
+
 	
  	return 0 ;
  }

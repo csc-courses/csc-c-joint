@@ -11,28 +11,30 @@ NC= \033[0m
 
 NUMBER = 123
 
+F= to-base-10-string
+
 all:
 	make test
 	make clean
 
-my-itoa: my-itoa.c
-	cc -o my-itoa my-itoa.c
+$F: $F.c
+	cc -o $F $F.c
 
-test: my-itoa
-	./my-itoa 0
-	./my-itoa 1
-	./my-itoa 21
-	./my-itoa 321
-	./my-itoa 4321
-	./my-itoa 12345
-	./my-itoa -0
-	./my-itoa -1
-	./my-itoa -21
-	./my-itoa -321
-	./my-itoa -4321
-	./my-itoa -12345
+test: $F
+	./$F 0
+	./$F 1
+	./$F 21
+	./$F 321
+	./$F 4321
+	./$F 12345
+	./$F -0
+	./$F -1
+	./$F -21
+	./$F -321
+	./$F -4321
+	./$F -12345
 	
 clean:
-	-rm my-itoa
+	-rm $F
 
 
