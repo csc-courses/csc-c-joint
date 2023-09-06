@@ -95,7 +95,7 @@ int bcd_sub(int d1, int d2) {
 }
 
 int main(int argc, char * argv[]) {
-	int d1, d2, d ;
+	int d1, d2, d_add, d_sub ;
 	char s1[1*sizeof(int)+1] ;
 	char s2[2*sizeof(int)+1] ;
 	char s[2*sizeof(int)+1] ;
@@ -111,16 +111,15 @@ int main(int argc, char * argv[]) {
 	len = bcd_toa(d2, s2, 2*sizeof(int)) ;
 	s2[len] = '\0' ;
 
-#ifndef IS_SUB
-	d = bcd_add(d1, d2) ;
-#else
-	d = bcd_sub(d1, d2) ;
-	op = '-' ;
-#endif
+	d_add = bcd_add(d1, d2) ;
+	d_sub = bcd_sub(d1, d2) ;
 
-	len = bcd_toa(d, s, 2*sizeof(int)) ;
+	len = bcd_toa(d_add, s, 2*sizeof(int)) ;
 	s[len] = '\0' ;
-	printf("%s %c %s = %s\n", s1, op, s2, s ) ;
+	printf("%s %c %s = %s\n", s1, '+', s2, s ) ;
+	len = bcd_toa(d_sub, s, 2*sizeof(int)) ;
+	s[len] = '\0' ;
+	printf("%s %c %s = %s\n", s1, '-', s2, s ) ;
 	
 	
  	return 0 ;
