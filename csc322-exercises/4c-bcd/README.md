@@ -41,10 +41,3 @@ number is the negative of the number, and is called the 10's complement.
 To subtract a - b, take the 9's complement of b and add it to 9, but start with a carry in (to simulate
 creating the 10's complement). Example: 456-274 = 00000456+99999725+1 = 00000182 = 182.
 
-
-
-
-the negative 
-
-
-
