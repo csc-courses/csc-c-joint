@@ -20,9 +20,9 @@
 #define IS_SUB 0
 #endif
 
-int ato_bcd(char a[], int len) {
+uint32_t ato_bcd(char a[], int len) {
 	int i, j = 0 ;
-	int r = 0, d ;
+	uint32_t r = 0, d ;
 	
 	assert( len <= (2*sizeof(int)) ) ;
 
@@ -34,7 +34,7 @@ int ato_bcd(char a[], int len) {
 	return r ;
 }
 
-int bcd_toa( int d, char a[], int len ) {
+int bcd_toa( uint32_t d, char a[], int len ) {
 	int bit, i ;
 	int l = 2*sizeof(int) ;
 	
@@ -55,10 +55,10 @@ int bcd_toa( int d, char a[], int len ) {
 	return l ;
 }
 
-int bcd_add_aux(int d1, int d2, int carry) {
-	int d = 0, t ;
-	int i  ;
-	for (i=0; i<2*sizeof(int); i++) {
+int bcd_add_aux(uint32_t d1, uint32_t d2, int carry) {
+	uint32_t d = 0 ;
+	int i, t  ;
+	for (i=0; i<2*sizeof(uint32_t); i++) {
 	
 		t = (0xf&d1)+(0xf&d2)+carry  ;
 		if (t>9) {
@@ -74,13 +74,13 @@ int bcd_add_aux(int d1, int d2, int carry) {
 	return d ;
 }
 
-int bcd_add(int d1, int d2) {
+uint32_t bcd_add(uint32_t d1, uint32_t d2) {
 	return bcd_add_aux(d1, d2, 0 ) ;
 }
 
-int bcd_9complement(int d) {
-	int d1 = 0, t ;
-	int i  ;
+uint32_t bcd_9complement(uint32_t d) {
+	uint32_t d1 = 0 ;
+	int i, t  ;
 	for (i=0; i<2*sizeof(int); i++) {
 		t = 9-(0xf&d) ;
 		d1 += t<<(4*i) ;
@@ -89,35 +89,38 @@ int bcd_9complement(int d) {
 	return d1 ;
 }
 
-int bcd_sub(int d1, int d2) {
-	int d = bcd_9complement(d2) ;
+uint32_t bcd_sub(uint32_t d1, uint32_t d2) {
+	uint32_t d = bcd_9complement(d2) ;
 	return bcd_add_aux(d1,d,1) ;
 }
 
 int main(int argc, char * argv[]) {
-	int d1, d2, d_add, d_sub ;
+	uint32_t d1, d2, d_add, d_sub ;
 	char s1[1*sizeof(int)+1] ;
 	char s2[2*sizeof(int)+1] ;
 	char s[2*sizeof(int)+1] ;
 	int len ;
-	assert(argc==3) ;
+
 	char op = '+' ;
 
+	assert(argc==3) ;
+	assert(sizeof(uint32_t)==4) ;
+	
 	d1 = ato_bcd(argv[1], strlen(argv[1])) ;
 	d2 = ato_bcd(argv[2], strlen(argv[2])) ;
 	
-	len = bcd_toa(d1, s1, 2*sizeof(int)) ;
+	len = bcd_toa(d1, s1, 2*sizeof(uint32_t)) ;
 	s1[len] = '\0' ;
-	len = bcd_toa(d2, s2, 2*sizeof(int)) ;
+	len = bcd_toa(d2, s2, 2*sizeof(uint32_t)) ;
 	s2[len] = '\0' ;
 
 	d_add = bcd_add(d1, d2) ;
 	d_sub = bcd_sub(d1, d2) ;
 
-	len = bcd_toa(d_add, s, 2*sizeof(int)) ;
+	len = bcd_toa(d_add, s, 2*sizeof(uint32_t)) ;
 	s[len] = '\0' ;
 	printf("%s %c %s = %s\n", s1, '+', s2, s ) ;
-	len = bcd_toa(d_sub, s, 2*sizeof(int)) ;
+	len = bcd_toa(d_sub, s, 2*sizeof(uint32_t)) ;
 	s[len] = '\0' ;
 	printf("%s %c %s = %s\n", s1, '-', s2, s ) ;
 	
