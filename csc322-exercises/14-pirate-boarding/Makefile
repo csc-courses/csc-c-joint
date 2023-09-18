@@ -1,6 +1,7 @@
 
 
 F= pirate-boarding
+G= pirate-print
 
 all:
 	make test
@@ -9,9 +10,13 @@ all:
 $F: $F.c
 	cc -o $@ $<
 	
-test: $F
+$G: $G.c
+	cc -o $@ $<
+	
+test: $F $G
 	./$F
+	./$G
 	
 clean:
-	-rm $F
+	-rm $F $G
 	
