@@ -4,8 +4,7 @@ F= pirate-boarding
 G= pirate-print
 
 all:
-	make test
-	make clean
+	@echo "targets are |make test-$F| or |make test-$G|"
 
 $F: $F.c
 	cc -o $@ $<
@@ -13,8 +12,10 @@ $F: $F.c
 $G: $G.c
 	cc -o $@ $<
 	
-test: $F $G
+test-$F: $F
 	./$F
+	
+test-$G: $G
 	./$G
 	
 clean:

@@ -16,7 +16,8 @@ long int there_be_pirates = 0 ;
 
 // 2 is the secret on OSX Ventura, Apple M1
 // 3 is the secret on a windows 11 Lenovo Intel
-#define PIRATE_SECRET 2 
+// 3 is the secret on Ubuntu/AWS
+#define PIRATE_SECRET 3 
 
 
 void caribbean_voyage() {
