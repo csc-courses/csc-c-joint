@@ -17,6 +17,7 @@
  	char * vowels = "aeiou" ;
  	int i, n , count ;
  	n = strlen(s) ;
+	count = 0 ;
  	for (i=0; i<n; i++) {
  		if (strchr(vowels, s[i])) count++ ;	
  	}
