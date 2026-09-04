@@ -28,11 +28,11 @@ the program flow  in non-standard ways.
 <li>
 Is it necessarily correct according to the C standard?
 <p style="margin:1em;">
-**No.**
+<b>No.</b>
 <li>
 Does it (sometimes) work on the machine we are using?
 <p style="margin:1em;">
-**Aye.**
+<b>Aye.</b>
 </ul>
 
 That is Pirate Programming.
