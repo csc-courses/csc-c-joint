@@ -2,7 +2,8 @@
 
 ```
 author: bjr
-last-update: 4 sep 2026
+last-update: 
+	4 sep 2026
 ```
 
 Pirate programming is the art of making a program do what you want,
@@ -16,7 +17,7 @@ does not promise will work.
 For example, let ```pirate_ship``` be the name of a function in a C
 language file. A line like the following is Pirate Programming
 
-```c
+```
 return_to = (long int) pirate_ship;
 ```
 
