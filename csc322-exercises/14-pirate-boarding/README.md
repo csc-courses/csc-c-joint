@@ -83,10 +83,10 @@ either **Princeton architecture** or  **von Neumann architecture**.
 
 ### Real life pirates
 
-The hacker magazine Phrack described this in an article 
+The hacker magazine Phrack described how to hook the return address on the 
+stack in the classic article 
 <a href="https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit">Smashing 
-the Stack for Fun and Profit</a> by Aleph One (1996). His name is Elias Levy.
-The original Phrack article was titled <u>Smashing the Stack for 
-Fun and Profit<.u>. We are Smashing the Stack for Education and Non-Profits ... (ugh!).
+the Stack for Fun and Profit</a> by Aleph One (1996).
+We are Smashing the Stack for Education and Non-Profits ... (ugh!).
 
 
