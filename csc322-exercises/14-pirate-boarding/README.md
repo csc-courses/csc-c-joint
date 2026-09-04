@@ -24,15 +24,16 @@ return_to = (long int) pirate_ship;
 Pirates treat a function pointer as an integer in order to manipulate
 the program flow  in non-standard ways.
 
-No.
-
+<ul>
+<li>
 Is it necessarily correct according to the C standard?
-
-No.
-
-Does it work on the machine on which we are sailing?
-
-*Aye.*
+<br>
+**No.**
+<li>
+Does it (sometimes) work on the machine we are using?
+<br>
+**Aye.**
+</ul>
 
 That is Pirate Programming.
 
