@@ -1,6 +1,9 @@
-
-
 # Pirate Programming
+
+```
+author: bjr
+last-update: 4 sep 2026
+```
 
 Pirate programming is the art of making a program do what you want,
 without being overly concerned with whether the method is elegant,
