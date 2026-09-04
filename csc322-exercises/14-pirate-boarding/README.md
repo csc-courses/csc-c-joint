@@ -52,9 +52,13 @@ and replaces it with the address of his pirate ship:
 ```c
 *(&i + PIRATE_SECRET) = return_to;
 ```
+where ```i``` is the name of a variable on the stack. Therefore ```&amp;i```
+is an address on the stack, the starting place for a guess where close by
+might be the resturn address.
 
-This is done inside the function ```caribbean_voyage()```. When the 
-functions returns, it returns to this address. The ship has been boarded.
+This &quot;hooking&quote; of the resturn address done inside the 
+function ```caribbean_voyage()```. When ```caribbean_voyage()```
+returns, it returns to this address. The ship has been boarded.
 
 ### Von Neumann architecture
 
