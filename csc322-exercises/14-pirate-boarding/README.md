@@ -62,8 +62,10 @@ returns, it returns to the replacement address. The ship has been boarded.
 
 ### Von Neumann architecture
 
-There is a bit of subtlety in the joke Pirate Long John Von Neumann. The 
-key here is that data and instructions are in the same memory. Hence, instructions
+There is a bit of subtlety in the joke Pirate Long John Von Neumann. 
+
+An important prerequisite to boarding the ship is that 
+data and instructions are in the same memory. Hence, instructions
 are data and data are instructions. 
 
 It is not always the case that data amd memory are stored together, with each
