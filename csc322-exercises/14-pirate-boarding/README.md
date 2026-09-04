@@ -27,11 +27,11 @@ the program flow  in non-standard ways.
 <ul>
 <li>
 Is it necessarily correct according to the C standard?
-<br>
+<p style="margin:1em;">
 **No.**
 <li>
 Does it (sometimes) work on the machine we are using?
-<br>
+<p style="margin:1em;">
 **Aye.**
 </ul>
 
