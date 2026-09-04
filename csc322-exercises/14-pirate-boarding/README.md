@@ -71,8 +71,8 @@ are data and data are instructions.
 It is not always the case that data amd memory are stored together, with each
 being able to be interpreted as the other.  A computer can
 have one memory for instructions and another for data. This is 
-called a **Harvard architecture**, after the early The Harvard Mark I,
-designed by Harvard mathematician Howard Aiken and built by IBM at Harvard in 1944.
+called a **Harvard architecture**, after the the Harvard Mark I, a computer
+designed by Harvard mathematician Howard Aiken and built at Harvard in 1944.
 
 In 1945 the Princeton mathematician **John von Neumann** 
 he wrote the famous *First Draft of a Report on the EDVAC*, 
