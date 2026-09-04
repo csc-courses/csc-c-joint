@@ -28,11 +28,11 @@ the program flow  in non-standard ways.
 <li>
 Is it necessarily correct according to the C standard?
 <p style="margin:1em;">
-&#9755; <b>No.</b>
+&#9755; <b>No!</b>
 <li>
 Does it (sometimes) work on the machine we are using?
 <p style="margin:1em;">
-&#9755; <b>Aye.</b>
+&#9755; <b>Aye!</b>
 </ul>
 
 That is Pirate Programming.
@@ -40,15 +40,14 @@ That is Pirate Programming.
 ### Pirate Boarding: hooking the return address
 
 This repository contains an example of Pirate Programming in C to hook
-the return address to divert the control follow of a program. This is 
+the return address to divert the control flow of a program. This is 
 also called <a href="https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit">Smashing 
 the Stack</a> and is a common hacker exploit.
 
-Pirate Long John von Neumann replaces one conde
+Pirate Long John von Neumann replaces one code
 flow with another by Smashing the Stack. 
-He finds a return address of leading back to the calling ship on the stack 
-and replaces it with the address of his
-pirate ship:
+He finds where on the stack is the return address leading back to the calling ship
+and replaces it with the address of his pirate ship:
 
 ```c
 *(&i + PIRATE_SECRET) = return_to;
