@@ -68,7 +68,7 @@ An important prerequisite to boarding the ship is that
 data and instructions are in the same memory. Hence, instructions
 are data and data are instructions. 
 
-It is not always the case that data amd memory are stored together, with each
+It is not always the case that data and memory are stored together, with each
 being able to be interpreted as the other.  A computer can
 have one memory for instructions and another for data. This is 
 called a **Harvard architecture**, after the the Harvard Mark I, a computer
