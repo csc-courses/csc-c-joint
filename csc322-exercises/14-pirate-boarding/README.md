@@ -86,6 +86,7 @@ either **Princeton architecture** or  **von Neumann architecture**.
 The hacker magazine Phrack described this in an article 
 <a href="https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit">Smashing 
 the Stack for Fun and Profit</a> by Aleph One (1996). His name is Elias Levy.
-We are Smashing the Stack for Education and Non-Profits ... (ugh!).
+The original Phrack article was titled <u>Smashing the Stack for 
+Fun and Profit<.u>. We are Smashing the Stack for Education and Non-Profits ... (ugh!).
 
 
