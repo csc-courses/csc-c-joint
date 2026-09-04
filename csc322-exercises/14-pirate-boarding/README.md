@@ -36,51 +36,40 @@ Does it work on the machine on which we are sailing?
 
 That is Pirate Programming.
 
-This repository contains an example of Pirate Programming in C.
+### Pirate Boarding: hooking the return address
 
-Long John von Neumann does not politely call a function.
+This repository contains an example of Pirate Programming in C to hook
+the return address to divert the control follow of a program. This is 
+also called *Smashing the Stack* and was a common way to exploit code to
+gain access to a computer.
 
-He hooks the stack.
 
-He finds the return address and replaces it with the address of his
+Pirate Long John von Neumann does not politely call a function.
+He finds a return address on the stack and replaces it with the address of his
 pirate ship:
 
 ```c
 *(&i + PIRATE_SECRET) = return_to;
 ```
 
-When ```caribbean_voyage()``` returns, the ship does not return to where it
-was supposed to go.
+This is done inside the function ```caribbean_voyage()```. When the 
+functions returns, it returns to this address. The ship has been boarded.
 
-It has been boarded.
+### Von Neumann architecture
 
-## Why Long John von Neumann?
+There is a bit of subtlety in the joke Pirate Long John Von Neumann. The 
+key here is that data and instructions are in the same memory. Hence, instructions
+are data and data are instructions. 
 
-In the beginning, there was no particular reason for a computer's
-program and its data to live in the same memory.
+It is not always the case that data amd memory are stored together, with each
+being able to be interpreted as the other.  A computer can
+have one memory for instructions and another for data. This is 
+called a **Harvard architecture**, after the early The Harvard Mark I,
+designed by Harvard mathematician Howard Aiken and built by IBM at Harvard in 1944.
 
-Indeed, there are good reasons to keep them separate. A computer can
-have one memory for instructions and another for data. This is generally
-called a **Harvard architecture**, and variations of this idea are still
-used today.
-
-But another possibility is much more interesting:
-
-**What if the program itself were stored in memory, alongside the data?**
-
-In 1944, **John von Neumann** joined the discussions surrounding this
-work. In 1945 he wrote the famous *First Draft of a Report on the
-EDVAC*, which described a computer in which instructions and numerical
+In 1945 the Princeton mathematician **John von Neumann** 
+he wrote the famous *First Draft of a Report on the EDVAC*, 
+which described a computer in which instructions and numerical
 data would be stored in the same memory. The report circulated widely
-and became enormously influential. :contentReference[oaicite:0]{index=0}
-
-The name **von Neumann architecture** stuck.
-
-If instructions and data occupy the same memory, then the program is
-**data**.
-
-And if the program is data, perhaps we can manipulate it.
-
-Perhaps we can even steal its return address.
-
-That is where the boarding begins.
+and became enormously influential. This architecture is called
+either **Princeton architecture** or  **von Neumann architecture**.
