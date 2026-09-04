@@ -40,12 +40,13 @@ That is Pirate Programming.
 
 This repository contains an example of Pirate Programming in C to hook
 the return address to divert the control follow of a program. This is 
-also called *Smashing the Stack* and was a common way to exploit code to
-gain access to a computer.
+also called <a href="https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit">Smashing 
+the Stack</a> and is a common hacker exploit.
 
-
-Pirate Long John von Neumann does not politely call a function.
-He finds a return address on the stack and replaces it with the address of his
+Pirate Long John von Neumann replaces one conde
+flow with another by Smashing the Stack. 
+He finds a return address of leading back to the calling ship on the stack 
+and replaces it with the address of his
 pirate ship:
 
 ```c
