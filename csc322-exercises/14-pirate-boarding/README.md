@@ -56,7 +56,7 @@ where ```i``` is the name of a variable on the stack. Therefore ```&i```
 is an address on the stack, the starting place for a guess where 
 might be stored the resturn address.
 
-This &quot;hooking&quote; of the resturn address done inside the 
+This &quot;hooking&quot; of the resturn address done inside the 
 function ```caribbean_voyage()```. When ```caribbean_voyage()```
 returns, it returns to this address. The ship has been boarded.
 
