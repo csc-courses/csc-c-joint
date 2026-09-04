@@ -75,7 +75,7 @@ data would be stored in the same memory. The report circulated widely
 and became enormously influential. This architecture is called
 either **Princeton architecture** or  **von Neumann architecture**.
 
-### Aleph one
+### Real life pirates
 
 The hacker magazine Phrack described this in an article 
 <a href="https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit">Smashing 
