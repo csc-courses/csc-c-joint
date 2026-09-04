@@ -13,7 +13,7 @@ does not promise will work.
 For example, let ```pirate_ship``` be the name of a function in a C
 language file. A line like the following is Pirate Programming
 
-```
+```c
 return_to = (long int) pirate_ship;
 ```
 
@@ -31,3 +31,21 @@ Does it work on the machine on which we are sailing?
 *Aye.*
 
 That is Pirate Programming.
+
+This repository contains an example of Pirate Programming in C.
+
+Long John von Neumann does not politely call a function.
+
+He hooks the stack.
+
+He finds the return address and replaces it with the address of his
+pirate ship:
+
+```c
+*(&i + PIRATE_SECRET) = return_to;
+```
+
+When ```caribbean_voyage()``` returns, the ship does not return to where it
+was supposed to go.
+
+It has been boarded.
