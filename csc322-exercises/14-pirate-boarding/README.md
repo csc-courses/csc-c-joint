@@ -74,3 +74,12 @@ which described a computer in which instructions and numerical
 data would be stored in the same memory. The report circulated widely
 and became enormously influential. This architecture is called
 either **Princeton architecture** or  **von Neumann architecture**.
+
+### Aleph one
+
+The hacker magazine Phrack described this in an article 
+<a href="https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit">Smashing 
+the Stack for Fun and Profit</a> by Aleph One (1996). His name is Elias Levy.
+We are Smashing the Stack for Education and Non-Profits ... (ugh!).
+
+
